@@ -3,6 +3,20 @@
     margin: 30px auto 60px;
     grid-template-columns: repeat(4, 1fr);
 
+    &_trust {
+        text-align: center;
+        margin-top: 60px;
+
+        p {
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            color: #323264;
+        }
+    }
+
     &_item {
         height: 120px;
         display: flex;

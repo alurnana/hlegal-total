@@ -191,12 +191,31 @@ svg path {
   color: #B3B3BA;
   font-size: 14px;
 }
+.team_dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.team_dots button {
+  display: block;
+  background-color: #24A3FF;
+  height: 16px;
+  width: 16px;
+  border: none;
+  border-radius: 50%;
+  opacity: 20%;
+  cursor: pointer;
+}
+.team_dots .active {
+  opacity: 100%;
+}
 
 .common_link {
   display: flex;
   align-items: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  gap: 2px;
   font-weight: 700;
   color: #24A3FF;
   margin-bottom: 5px;
@@ -216,6 +235,18 @@ svg path {
   display: grid;
   margin: 30px auto 60px;
   grid-template-columns: repeat(4, 1fr);
+}
+.clients_trust {
+  text-align: center;
+  margin-top: 60px;
+}
+.clients_trust p {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #323264;
 }
 .clients_item {
   height: 120px;

@@ -27,6 +27,27 @@
         color: #B3B3BA;
         font-size: 14px;
     }
+
+    &_dots {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+
+        button {
+            display: block;
+            background-color: #24A3FF;
+            height: 16px;
+            width: 16px;
+            border: none;
+            border-radius: 50%;
+            opacity: 20%;
+            cursor: pointer;
+        }
+
+        .active {
+            opacity: 100%;
+        }
+    }
 }
 
 .common_link {
@@ -34,6 +55,7 @@
     align-items: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    gap: 2px;
     font-weight: 700;
     color: #24A3FF;
     margin-bottom: 5px;
