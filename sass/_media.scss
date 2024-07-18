@@ -1,0 +1,261 @@
+@media (min-width: 375px) {
+    .mobile-hidden {
+        display: none;
+    }
+
+    .services {
+        h2 {
+            font-size: 30px;
+            }
+        
+        &_title {
+            padding-top: 30px;
+            max-width: 315px;
+        }
+
+        &_cards {
+            max-width: 315px;
+            margin-top: 30px;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+    }
+
+    .clients {
+        max-width: 375px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .team {
+        &_block {
+            max-width: 315px;
+            grid-template-columns: repeat(1, minmax(315px, auto));
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 12px; 
+            border-bottom-left-radius: 12px;
+        }
+    }
+
+    .common_title {
+        font-size: 30px;
+    }
+
+    .public_block {
+        max-width: 315px;
+        margin: 0 auto;
+    }
+
+    .public_cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .mobile-hidden {
+        display: flex;
+    }
+
+    .services {
+        &_title {
+            padding-top: 60px;
+            max-width: 648px;
+            margin-bottom: 60px;
+
+            h2 {
+            font-size: 38px;
+            }
+        }
+
+        &_cards {
+            max-width: 648px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+        }
+    }
+
+    .clients {
+        max-width: 768px;
+        grid-template-columns: repeat(3, 1fr);
+
+        img {
+            width: 70%;
+        }
+    }
+
+    .team {
+        &_block {
+            max-width: 648px;
+            grid-template-columns: 1fr;
+            
+            img {
+                width: 100%;
+                object-fit: cover;
+                overflow: hidden;
+                border-bottom-left-radius: 0;
+                border-top-right-radius: 12px;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 12px;
+        }
+    }
+
+    .common_link {
+        font-size: 14px;
+    }
+
+    .common_title {
+        font-size: 38px;
+    }
+
+    .public_cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        &_img {
+            height: 200px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+
+    .public_card:nth-child(3) {
+        grid-column: 1 / -1;
+
+        img {
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+
+    .public_block {
+        max-width: 648px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .services_title {
+        max-width: 904px;
+    }
+
+    .services_cards { 
+        max-width: 904px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    .clients {
+        max-width: 1024px;
+        grid-template-columns: repeat(4, 1fr);
+
+        img {
+            width: 60%;
+        }
+    }
+
+    .team {
+        &_block {
+            max-width: 904px;
+            grid-template-columns: repeat(2, minmax(400px, auto));
+            
+            img {
+                height: 100%;
+                border-bottom-left-radius: 12px;
+                border-top-right-radius: 0;
+            }
+        }
+
+        &_info {
+            border-top-right-radius: 12px;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    .public_block {
+        max-width: 904px;
+    }
+
+    .public_cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .public_card:nth-child(3) {
+        grid-column: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .services_cards,
+    .services_title,
+    .public_block {
+        max-width: 1320px;
+    }
+
+    .clients {
+        max-width: 1440px;
+    }
+
+    .clients_item {
+        img {
+            width: 50%;
+        }
+    }
+
+    .team_block {
+        max-width: 1320px;
+
+        img { 
+            max-height: 344px;
+        }
+    }
+}
+
+@media (min-width: 1920px) {
+    .services_title {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 160px 60px;
+    }
+
+    .services_cards {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 160px;
+    }
+
+    .clients {
+        max-width: 1720px;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .team_block {
+        width: 100%;
+        max-width: 1600px;
+
+        img { 
+            max-height: 300px;
+        }
+    }
+
+    .public_block {
+        width: 100%;
+        max-width: 1600px;
+    }
+}

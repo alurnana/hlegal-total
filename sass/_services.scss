@@ -1,0 +1,102 @@
+@use './colors';
+
+.services {
+    background: linear-gradient(-110deg, rgba(50, 50, 100, 1), rgba(50, 50, 100, 1), rgba(100, 62, 114, 1));
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin-bottom: 60px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_title {
+        padding-top: 60px;
+        width: 100%;
+        a {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            color: colors.$textColorBlue;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .services_hover:hover {
+            a {
+                color: rgba(240, 20, 90, 1);
+            }
+
+            svg {
+                stroke:  rgba(240, 20, 90, 1);
+            }
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-weight: 700;
+            font-size: 38px;
+            background: linear-gradient(90deg, rgba(240, 20, 90, 1), rgba(239, 128, 128, 1));
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    &_cards {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 20px;
+        left: 20px;
+        z-index: 5;
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background-color: #CACADB;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        right: 40px;
+        left: 40px;
+        z-index: 5;
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+        background-color: #E7E7F2;
+    }
+}
+
+.card {
+
+    .img_box {
+        display: inline-block;
+        padding: 14px;
+        background-color: colors.$basicWhite;
+        border-radius: 24px;
+    }
+
+    h5 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        font-size: 22px;
+        color: colors.$textColorBlue;
+        line-height: 27px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 26px;
+        color: colors.$basicWhite;
+    }
+}
