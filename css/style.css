@@ -297,6 +297,7 @@ svg path {
 .public {
   background-color: #F5F5FA;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 .public_title {
   display: flex;
