@@ -27,8 +27,68 @@ svg path {
   fill: inherit;
 }
 
-.services {
+.background_color {
   background: linear-gradient(-110deg, rgb(50, 50, 100), rgb(50, 50, 100), rgb(100, 62, 114));
+}
+
+.link_hover:hover a {
+  color: rgb(240, 20, 90);
+}
+.link_hover:hover svg {
+  stroke: rgb(240, 20, 90);
+}
+
+.experience {
+  padding: 60px 180px;
+  margin: 0 auto;
+}
+.experience_inner {
+  display: flex;
+  justify-content: center;
+}
+.experience_scroll {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  flex-shrink: 0;
+  gap: 30px;
+  padding-right: 60px;
+}
+.experience_scroll li:first-child {
+  background: linear-gradient(90deg, #EF8080, #F0145A);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.experience_scroll a {
+  display: inline;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 1.2;
+  color: #B3B3BA;
+}
+.experience_scroll a:hover {
+  color: #F0145A;
+}
+.experience_info {
+  padding: 43px 0 43px 60px;
+  margin: 30px auto 0;
+  position: relative;
+  border-left: 4px solid rgba(255, 255, 255, 0.3019607843);
+}
+.experience_info h4 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.experience_info p {
+  font-size: 19px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.services {
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
   margin-bottom: 60px;
@@ -51,12 +111,6 @@ svg path {
   font-weight: 700;
   font-size: 14px;
 }
-.services_title .services_hover:hover a {
-  color: rgb(240, 20, 90);
-}
-.services_title .services_hover:hover svg {
-  stroke: rgb(240, 20, 90);
-}
 .services_title h2 {
   margin-top: 10px;
   font-weight: 700;
@@ -66,7 +120,6 @@ svg path {
   -webkit-text-fill-color: transparent;
 }
 .services_cards {
-  margin-top: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 60px;
@@ -140,6 +193,8 @@ svg path {
 }
 
 .common_link {
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
@@ -265,6 +320,37 @@ svg path {
 }
 
 @media (min-width: 375px) {
+  .experience {
+    padding: 30px 0;
+  }
+  .experience_inner {
+    flex-direction: column;
+  }
+  .experience_scroll {
+    flex-direction: row;
+    overflow: auto;
+  }
+  .experience_scroll li {
+    flex-shrink: 0;
+  }
+  .experience_scroll li:first-child {
+    margin-left: 30px;
+  }
+  .experience_scroll li:last-child {
+    margin-right: 30px;
+  }
+  .experience_scroll a {
+    font-size: 30px;
+  }
+  .experience_info {
+    padding: 30px 0 0;
+    max-width: 315px;
+    border-left: none;
+    border-top: 4px solid rgba(255, 255, 255, 0.3019607843);
+  }
+  .experience_info h4 {
+    font-size: 20px;
+  }
   .mobile-hidden {
     display: none;
   }
@@ -277,7 +363,6 @@ svg path {
   }
   .services_cards {
     max-width: 315px;
-    margin-top: 30px;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     padding-bottom: 30px;
@@ -314,11 +399,26 @@ svg path {
   }
 }
 @media (min-width: 768px) {
+  .experience_scroll li:first-child {
+    margin-left: 60px;
+  }
+  .experience_scroll li:last-child {
+    margin-right: 60px;
+  }
+  .experience_scroll a {
+    font-size: 38px;
+  }
+  .experience_info {
+    max-width: 648px;
+    padding: 60px 0 0;
+  }
+  .experience_info h4 {
+    font-size: 30px;
+  }
   .mobile-hidden {
     display: flex;
   }
   .services_title {
-    padding-top: 60px;
     max-width: 648px;
     margin-bottom: 60px;
   }
@@ -378,6 +478,28 @@ svg path {
   }
 }
 @media (min-width: 1024px) {
+  .experience {
+    max-width: 904px;
+  }
+  .experience_inner {
+    flex-direction: row;
+  }
+  .experience_scroll {
+    flex-direction: column;
+  }
+  .experience_scroll li:first-child {
+    margin-left: 0;
+  }
+  .experience_scroll li:last-child {
+    margin-right: 0;
+  }
+  .experience_info {
+    padding: 0;
+    padding-left: 60px;
+    margin: 0;
+    border-top: none;
+    border-left: 4px solid rgba(255, 255, 255, 0.3019607843);
+  }
   .services_title {
     max-width: 904px;
   }
@@ -419,8 +541,13 @@ svg path {
 @media (min-width: 1440px) {
   .services_cards,
   .services_title,
-  .public_block {
+  .public_block,
+  .experience {
     max-width: 1320px;
+  }
+  .experience_info {
+    padding-top: 43px;
+    padding-bottom: 43px;
   }
   .clients {
     max-width: 1440px;
@@ -436,6 +563,15 @@ svg path {
   }
 }
 @media (min-width: 1920px) {
+  .experience {
+    max-width: 1360px;
+  }
+  .experience_info {
+    max-width: 910px;
+    width: 100%;
+    padding-top: 73px;
+    padding-bottom: 73px;
+  }
   .services_title {
     width: 100%;
     max-width: 1600px;

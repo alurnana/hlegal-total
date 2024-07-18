@@ -1,0 +1,57 @@
+.experience {
+    padding: 60px 180px;
+    margin: 0 auto;
+
+    &_inner {
+        display: flex;
+        justify-content: center;
+    }
+
+    &_scroll {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        flex-shrink: 0;
+        gap: 30px;
+        padding-right: 60px;
+        
+        li:first-child {
+            background: linear-gradient(90deg, #EF8080, #F0145A);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a {
+            display: inline;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 1.2;
+            color: #B3B3BA;
+
+            &:hover {
+                color: #F0145A;
+            }
+        }
+    }
+
+    &_info {
+        padding: 43px 0 43px 60px;
+        margin: 30px auto 0;
+        position: relative;
+        border-left: 4px solid #FFFFFF4D;
+
+        h4 {
+            color: #fff;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 19px;
+            color: #fff;
+            line-height: 1.5;
+        }
+    }
+}

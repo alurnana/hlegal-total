@@ -1,7 +1,6 @@
 @use './colors';
 
 .services {
-    background: linear-gradient(-110deg, rgba(50, 50, 100, 1), rgba(50, 50, 100, 1), rgba(100, 62, 114, 1));
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     margin-bottom: 60px;
@@ -24,16 +23,6 @@
             font-size: 14px;
         }
 
-        .services_hover:hover {
-            a {
-                color: rgba(240, 20, 90, 1);
-            }
-
-            svg {
-                stroke:  rgba(240, 20, 90, 1);
-            }
-        }
-
         h2 {
             margin-top: 10px;
             font-weight: 700;
@@ -45,7 +34,6 @@
     }
 
     &_cards {
-        margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 60px;

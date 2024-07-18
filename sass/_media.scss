@@ -1,4 +1,44 @@
 @media (min-width: 375px) {
+    .experience {
+        padding: 30px 0;
+
+        &_inner {
+            flex-direction: column;
+        }
+
+        &_scroll {
+            flex-direction: row;
+            overflow: auto;
+
+            li {
+                flex-shrink: 0;
+
+                &:first-child {
+                    margin-left: 30px;
+                }
+
+                &:last-child {
+                    margin-right: 30px;
+                }
+            }
+
+            a {
+                font-size: 30px;
+            }
+        }
+
+        &_info {
+            padding: 30px 0 0;
+            max-width: 315px;
+            border-left: none;
+            border-top: 4px solid #FFFFFF4D;
+
+            h4 {
+                font-size: 20px;
+            }
+        }
+    }
+
     .mobile-hidden {
         display: none;
     }
@@ -15,7 +55,6 @@
 
         &_cards {
             max-width: 315px;
-            margin-top: 30px;
             grid-template-columns: repeat(1, 1fr);
             gap: 30px;
             padding-bottom: 30px;
@@ -63,13 +102,39 @@
 }
 
 @media (min-width: 768px) {
+    .experience {
+        &_scroll {
+            li {
+                &:first-child {
+                    margin-left: 60px;
+                }
+    
+                &:last-child {
+                    margin-right: 60px;
+                }
+            }
+    
+            a {
+                font-size: 38px;
+            }
+        }
+
+        &_info {
+            max-width: 648px;
+            padding: 60px 0 0;
+
+            h4 {
+                font-size: 30px;
+            }
+        }
+    }
+
     .mobile-hidden {
         display: flex;
     }
 
     .services {
         &_title {
-            padding-top: 60px;
             max-width: 648px;
             margin-bottom: 60px;
 
@@ -149,6 +214,36 @@
 }
 
 @media (min-width: 1024px) {
+    .experience {
+        max-width: 904px;
+
+        &_inner {
+            flex-direction: row;
+        }
+
+        &_scroll {
+            flex-direction: column;
+
+            li {
+                &:first-child {
+                    margin-left: 0;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &_info {
+            padding: 0;
+            padding-left: 60px;
+            margin: 0;
+            border-top: none;
+            border-left: 4px solid #FFFFFF4D;
+        }
+    }
+    
     .services_title {
         max-width: 904px;
     }
@@ -202,10 +297,16 @@
 @media (min-width: 1440px) {
     .services_cards,
     .services_title,
-    .public_block {
+    .public_block,
+    .experience {
         max-width: 1320px;
     }
 
+    .experience_info {
+        padding-top: 43px;
+        padding-bottom: 43px;
+    }
+    
     .clients {
         max-width: 1440px;
     }
@@ -226,6 +327,17 @@
 }
 
 @media (min-width: 1920px) {
+    .experience {
+        max-width: 1360px;
+
+        &_info {
+            max-width: 910px;
+            width: 100%;
+            padding-top: 73px;
+            padding-bottom: 73px;
+        }
+    }
+
     .services_title {
         width: 100%;
         max-width: 1600px;
