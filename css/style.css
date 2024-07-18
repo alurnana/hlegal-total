@@ -391,6 +391,7 @@ svg path {
   }
   .services_title {
     padding-top: 30px;
+    padding-bottom: 30px;
     max-width: 315px;
   }
   .services_cards {
